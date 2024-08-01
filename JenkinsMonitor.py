@@ -25,6 +25,7 @@ class JenkinsMonitor:
 
     def start_monitor(self):
         # 在这里编写启动监控的逻辑，使用 self.name、self.url、self.success_message、self.failure_message
+        # logger.info("start monitor --> {}".format(self.url))
         monitor_build_status(self.url, self.name, self.success_message, self.failure_message)
 
     def is_need_send(self, data):

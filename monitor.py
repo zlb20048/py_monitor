@@ -6,10 +6,10 @@ import gerrit_monitor
 from loguru import logger
 import app_config
 import jira_monitor
-from apscheduler.schedulers.background import BlockingScheduler
+from apscheduler.schedulers.background import BackgroundScheduler
 from robot import tel_bot
 
-scheduler = BlockingScheduler()
+scheduler = BackgroundScheduler()
 
 # 移除默认的 stderr 处理器
 logger.remove(handler_id=None)
