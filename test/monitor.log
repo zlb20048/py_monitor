@@ -1,0 +1,6 @@
+2024-01-09 19:15:51.000 | INFO     | __main__:do_log_test:6 - do log test info
+2024-01-09 19:16:01.064 | DEBUG    | __main__:do_log_test:5 - do log test debug
+2024-01-09 19:16:01.064 | INFO     | __main__:do_log_test:6 - do log test info
+2024-01-09 19:16:23.910 | DEBUG    | __main__:do_log_test:5 - do log test debug
+2024-01-09 19:16:23.910 | INFO     | __main__:do_log_test:6 - do log test info
+2024-01-09 19:16:57.323 | INFO     | __main__:do_log_test:6 - do log test info

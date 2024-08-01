@@ -1,0 +1,227 @@
+{
+  "jenkins": [
+    {
+      "name": "QingGan_APP_M116",
+      "url": "http://10.10.96.190:8080/view/JAC/view/M116/job/QingGan_APP_M116/",
+      "actions": [
+        {
+          "name": "VERSION_TYPE",
+          "value": "Release"
+        },
+        {
+          "name": "TARGET_MODULE",
+          "value": ""
+        }
+      ],
+      "feishu_robot": [
+        {
+          "robot_url": "https://open.feishu.cn/open-apis/bot/v2/hook/d8fcb1b1-4917-4634-a39b-8dfd922e32f1",
+          "robot_key": "q6C0F2EJyCaNxhREYWCepg",
+          "tag": "内-江淮M116研发",
+          "need_send_message": true
+        },
+        {
+          "robot_url": "https://open.feishu.cn/open-apis/bot/v2/hook/069ea72c-0154-4240-9bd9-e42e702a5e05",
+          "robot_key": "5kC2Sl3pFoi9bDwolplp1c",
+          "tag": "自己的机器人",
+          "need_send_message": true
+        }
+      ]
+    },
+    {
+      "name": "QingGan_APP_M116_SOP",
+      "url": "http://10.10.96.190:8080/view/JAC/view/M116/job/QingGan_APP_M116_sop/",
+      "actions": [
+        {
+          "name": "VERSION_TYPE",
+          "value": "Release"
+        },
+        {
+          "name": "TARGET_MODULE",
+          "value": ""
+        }
+      ],
+      "feishu_robot": [
+        {
+          "robot_url": "https://open.feishu.cn/open-apis/bot/v2/hook/d8fcb1b1-4917-4634-a39b-8dfd922e32f1",
+          "robot_key": "q6C0F2EJyCaNxhREYWCepg",
+          "tag": "内-江淮M116研发",
+          "need_send_message": true
+        },
+        {
+          "robot_url": "https://open.feishu.cn/open-apis/bot/v2/hook/069ea72c-0154-4240-9bd9-e42e702a5e05",
+          "robot_key": "5kC2Sl3pFoi9bDwolplp1c",
+          "tag": "自己的机器人",
+          "need_send_message": true
+        }
+      ]
+    },
+    {
+      "name": "H97C_IVY",
+      "url": "http://10.10.96.190:8080/view/DongFeng/view/H97c/view/IVY/job/PRJ_H97c_QNX_IVY/",
+      "feishu_robot": [
+        {
+          "robot_url": "https://open.feishu.cn/open-apis/bot/v2/hook/069ea72c-0154-4240-9bd9-e42e702a5e05",
+          "robot_key": "5kC2Sl3pFoi9bDwolplp1c",
+          "tag": "自己的机器人",
+          "need_send_message": true
+        }
+      ]
+    },
+    {
+      "name": "H97Y_IVY",
+      "url": "http://10.10.96.190:8080/view/DongFeng/view/VOYAH/view/Platform_Job/view/H97y/job/PRJ_H97Y_Platform_QNX_ivy/",
+      "feishu_robot": [
+        {
+          "robot_url": "https://open.feishu.cn/open-apis/bot/v2/hook/069ea72c-0154-4240-9bd9-e42e702a5e05",
+          "robot_key": "5kC2Sl3pFoi9bDwolplp1c",
+          "tag": "自己的机器人",
+          "need_send_message": true
+        }
+      ]
+    },
+    {
+      "name": "HMTC8295_APP",
+      "url": "http://10.10.96.190:8080/view/HMTC/view/HMTC8295/job/PRJ_HMTC_APP/",
+      "actions": [
+        {
+          "name": "TARGET_MODULE",
+          "value": ""
+        }
+      ],
+      "feishu_robot": [
+        {
+          "robot_url": "https://open.feishu.cn/open-apis/bot/v2/hook/069ea72c-0154-4240-9bd9-e42e702a5e05",
+          "robot_key": "5kC2Sl3pFoi9bDwolplp1c",
+          "tag": "自己的机器人",
+          "need_send_message": true
+        },
+        {
+          "robot_url": "https://open.feishu.cn/open-apis/bot/v2/hook/75b0968b-b81c-45d4-b852-8a044318700c",
+          "robot_key": "g09GEEgsDfwjLa5ZaDgRBb",
+          "tag": "车控组群",
+          "need_send_message": false
+        },
+        {
+          "robot_url": "https://open.feishu.cn/open-apis/bot/v2/hook/ab324c7a-61c9-4481-a29b-3f8eb91f6b6c",
+          "robot_key": "iYzw0rxpyKWkqAIrlkW0ub",
+          "tag": "现代8295-研发群",
+          "need_send_message": false
+        }
+      ]
+    },
+    {
+      "name": "HMTC8295_FWK",
+      "url": "http://10.10.96.190:8080/view/HMTC/view/HMTC8295/job/PRJ_HMTC_8295/",
+      "feishu_robot": [
+        {
+          "robot_url": "https://open.feishu.cn/open-apis/bot/v2/hook/069ea72c-0154-4240-9bd9-e42e702a5e05",
+          "robot_key": "5kC2Sl3pFoi9bDwolplp1c",
+          "tag": "自己的机器人",
+          "need_send_message": true
+        },
+        {
+          "robot_url": "https://open.feishu.cn/open-apis/bot/v2/hook/ab324c7a-61c9-4481-a29b-3f8eb91f6b6c",
+          "robot_key": "iYzw0rxpyKWkqAIrlkW0ub",
+          "tag": "现代8295-研发群",
+          "need_send_message": true
+        }
+      ]
+    }
+  ],
+  "jira": [
+    {
+      "name": "8295超期任务",
+      "project": "HMTC8295",
+      "condition": "project = HMTC8295 AND issuetype in (Task, Sub-Task) AND status in (\"In Progress\", Pending, \"REVIEW TBD\", Approved, \"Create\") AND resolution = Unresolved AND cf[10446] <= 0d AND assignee in (huanhuanwu, xugang, ziqiangchen, hongweiqiu, haowang, mengwang, yannanchang, qiangli, xiaoleli, shengzhang, xiankuimeng, zixiangliu) ORDER BY priority DESC, updated DESC",
+      "feishu_robot": [
+        {
+          "robot_url": "https://open.feishu.cn/open-apis/bot/v2/hook/75b0968b-b81c-45d4-b852-8a044318700c",
+          "robot_key": "g09GEEgsDfwjLa5ZaDgRBb",
+          "tag": "车控组群",
+          "need_send_message": true
+        },
+        {
+          "robot_url": "https://open.feishu.cn/open-apis/bot/v2/hook/069ea72c-0154-4240-9bd9-e42e702a5e05",
+          "robot_key": "5kC2Sl3pFoi9bDwolplp1c",
+          "tag": "自己的机器人",
+          "need_send_message": true
+        }
+      ]
+    }
+  ],
+  "logging": {
+    "level": "info",
+    "file": "logs/app.log"
+  },
+  "gerrit_config": {
+    "check_count": 3,
+    "project": [
+      {
+        "project_name": "projects/Pateo-APP-JAC",
+        "is_need_merge": false,
+        "ignore_branch": "M116_sop",
+        "is_need_jenkins_verify": false
+      },
+      {
+        "project_name": "projects/Pateo-APP-JAC",
+        "is_need_merge": true,
+        "ignore_branch": "master",
+        "is_need_jenkins_verify": false
+      },
+      {
+        "project_name": "projects/HYUNDAI-APP/toml",
+        "is_need_merge": false,
+        "ignore_branch": "master",
+        "is_need_jenkins_verify": false
+      },
+      {
+        "project_name": "projects/HYUNDAI-APP/packages/apps",
+        "is_need_merge": true,
+        "ignore_branch": "master",
+        "is_need_jenkins_verify": true
+      }
+    ],
+    "manager_project": [
+      {
+        "project_name": "projects/Pateo-APP-JAC",
+        "project_config": [
+          {
+            "is_need_merge": false,
+            "ignore_branch": "M116_sop",
+            "is_need_jenkins_verify": false
+          },
+          {
+            "is_need_merge": true,
+            "ignore_branch": "master",
+            "is_need_jenkins_verify": false
+          }
+        ]
+      },
+      {
+        "project_name": "projects/HYUNDAI-APP/toml",
+        "project_config": [
+          {
+            "is_need_merge": false,
+            "ignore_branch": "master",
+            "is_need_jenkins_verify": false
+          }
+        ]
+      },
+      {
+        "project_name": "projects/HYUNDAI-APP/packages/apps",
+        "project_config": [
+          {
+            "is_need_merge": true,
+            "ignore_branch": "master",
+            "is_need_jenkins_verify": true
+          }
+        ]
+      }
+    ]
+  },
+  "app": {
+    "sleep_time": 20,
+    "max_connections": 10
+  }
+}
