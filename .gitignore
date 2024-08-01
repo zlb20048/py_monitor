@@ -1,0 +1,10 @@
+.idea/
+# 忽略所有的 __pycache__ 目录及其内容
+__pycache__/
+
+# 忽略 db 目录下的 __pycache__ 目录及其内容
+db/__pycache__/
+
+# 忽略 robot 目录下的 __pycache__ 目录及其内容
+robot/__pycache__/
+
