@@ -160,11 +160,11 @@ def monitor_gerrit():
                         if app["ignore_branch"] == branch:
                             verify_and_merge(gerrit_url, patch_id=patch_id)
                         else:
-                            logger.error(f"项目{app['project_name']}当前{branch}不能merge")
+                            logger.error(f"项目当前{branch}不能merge")
                     else:
                         if app["ignore_branch"] == branch:
                             logger.info(
-                                f"项目{app['project_name']}分支不在管理列表,当前{branch}不做merge动作")
+                                f"项目分支不在管理列表,当前{branch}不做merge动作")
                         else:
                             logger.info("不需要Merge")
                 else:

@@ -103,16 +103,16 @@
           "need_send_message": false
         },
         {
-          "robot_url": "https://open.feishu.cn/open-apis/bot/v2/hook/ab324c7a-61c9-4481-a29b-3f8eb91f6b6c",
-          "robot_key": "iYzw0rxpyKWkqAIrlkW0ub",
-          "tag": "现代8295-研发群",
-          "need_send_message": false
+          "robot_url": "https://open.feishu.cn/open-apis/bot/v2/hook/6625953f-13f0-41c9-ac93-a36fc288dd98",
+          "robot_key": "Ze3ByAKdmr6sjANd9o42Kd",
+          "tag": "现代8295 App开发群",
+          "need_send_message": true
         }
       ]
     },
     {
       "name": "HMTC8295_FWK",
-      "url": "http://10.10.96.190:8080/view/HMTC/view/HMTC8295/job/PRJ_HMTC_8295/",
+      "url": "http://10.10.96.190:8080/view/HMTC/view/HMTC8295/job/PRJ_HMTC_QNX/",
       "feishu_robot": [
         {
           "robot_url": "https://open.feishu.cn/open-apis/bot/v2/hook/069ea72c-0154-4240-9bd9-e42e702a5e05",
@@ -156,32 +156,6 @@
   },
   "gerrit_config": {
     "check_count": 3,
-    "project": [
-      {
-        "project_name": "projects/Pateo-APP-JAC",
-        "is_need_merge": false,
-        "ignore_branch": "M116_sop",
-        "is_need_jenkins_verify": false
-      },
-      {
-        "project_name": "projects/Pateo-APP-JAC",
-        "is_need_merge": true,
-        "ignore_branch": "master",
-        "is_need_jenkins_verify": false
-      },
-      {
-        "project_name": "projects/HYUNDAI-APP/toml",
-        "is_need_merge": false,
-        "ignore_branch": "master",
-        "is_need_jenkins_verify": false
-      },
-      {
-        "project_name": "projects/HYUNDAI-APP/packages/apps",
-        "is_need_merge": true,
-        "ignore_branch": "master",
-        "is_need_jenkins_verify": true
-      }
-    ],
     "manager_project": [
       {
         "project_name": "projects/Pateo-APP-JAC",

@@ -1,5 +1,4 @@
 from gerrit_onwer_data import GerritData
-import app_config
 
 
 def do_data_test():
@@ -25,12 +24,14 @@ def test_include():
         print("Not in projects")
 
 
-def load_app_config_data():
-    manager_project = app_config.get_jenkins_configs()["manager_project"]
-    print(f"manager project --> {manager_project}")
 
+def do_json_data_test():
+    data = {"number": 21}
+    artifact = f"number = {data['number']}"
+    print(f"artifact --> {artifact}")
 
 if __name__ == '__main__':
     # do_data_test()
     # test_include()
-    load_app_config_data()
+    # load_app_config_data()
+    do_json_data_test()

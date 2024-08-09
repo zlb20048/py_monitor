@@ -38,6 +38,8 @@ def monitor_build_status(
             if data["result"] == "SUCCESS":
                 logger.info("Job is build success ... send feishu notify")
                 success_message(data)
+            elif data["result"] == "ABORTED":
+                logger.info("Job Aborted")
             else:
                 logger.error("build failed")
                 failure_message(data)

@@ -43,4 +43,4 @@ def get_latest_build_data(job_url):
 
 
 if __name__ == '__main__':
-    get_latest_build_url("http://10.10.96.190:8080/view/HMTC/view/HMTC8295/job/PRJ_HMTC_APP/")
+    get_latest_build_data("http://10.10.96.190:8080/view/HMTC/view/HMTC8295/job/PRJ_HMTC_QNX/212/")

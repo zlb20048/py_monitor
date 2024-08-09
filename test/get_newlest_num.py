@@ -2,7 +2,7 @@ import requests
 
 # jenkins_url = "http://10.10.96.190:8080/view/DongFeng/view/H97c/view/IVY/job/PRJ_H97c_QNX_IVY/150/"
 # jenkins_url = "http://10.10.96.190:8080/view/Hozon/view/EP37/view/EP37_Release/job/PRJ_EP37_QNX_Release/179/"
-jenkins_url = "http://10.10.96.190:8080/view/JAC/view/M116/job/QingGan_APP_M116/220"
+jenkins_url = "http://10.10.96.190:8080/view/HMTC/view/HMTC8295/job/PRJ_HMTC_QNX/211/"
 
 api_url = jenkins_url + "/api/json"
 response = requests.get(api_url)

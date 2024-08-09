@@ -49,6 +49,10 @@ class JenkinsMonitor:
             artifact_url = build_url + "artifact/"
             dt_object = datetime.fromtimestamp(data["timestamp"] / 1000.0)
             current_time = dt_object.strftime("%Y-%m-%d %H:%M:%S")
+            # 增加不同的artifact的判断
+            if "PRJ_HMTC_QNX" in self.url:
+                artifact_url = f"http://10.10.96.167:8080/PRJ_HMTC_QNX/{data['number']}"
+
             report_content = [
                 [{"tag": "text", "text": "恭喜你，版本编译成功啦"}],
                 [{"tag": "text", "text": "编译时间: {}".format(current_time)}],
