@@ -2,8 +2,11 @@ import requests
 import jenkins_trigger
 from db import orm_db
 from loguru import logger
+from db import save_file
 
 # app = Flask(__name__)
+
+CONVERSATION_BUILD_NAME = "CONVERSATION_BUILD_NAME"
 
 TELEGRAM_BOT_TOKEN = '7199212814:AAHusMVs824orJGJzaMMVv5JJOMIe_dKT_g'
 TELEGRAM_API_URL = f'https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}'
@@ -13,6 +16,8 @@ proxies = {
     'http': 'http://localhost:17890',
     'https': 'http://localhost:17890'
 }
+
+jenkins_conversation_store = save_file.KeyValueStore("tel_bot_conversation.properties")
 
 
 def get_updates(offset=None):
@@ -30,7 +35,8 @@ def send_message(chat_id, text):
 
 
 def do_robot_start():
-    offset = orm_db.get_jenkins_build_update_id()
+    # offset = orm_db.get_jenkins_build_update_id()
+    offset = jenkins_conversation_store.get(CONVERSATION_BUILD_NAME)
     logger.info(f"offset --> {offset}")
     try:
         updates = get_updates(offset)
@@ -51,7 +57,8 @@ def do_robot_start():
                     send_message(chat_id, f'你发送了: {message_text}')
 
                 # 更新offset以防止重复获取相同的消息
-                orm_db.save_jenkins_build_update_id(update['update_id'] + 1, "")
+                # orm_db.save_jenkins_build_update_id(update['update_id'] + 1, "")
+                jenkins_conversation_store.add(CONVERSATION_BUILD_NAME, update['update_id'] + 1)
     except Exception as e:
         logger.error(e)
     finally:

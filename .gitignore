@@ -8,3 +8,5 @@ db/__pycache__/
 # 忽略 robot 目录下的 __pycache__ 目录及其内容
 robot/__pycache__/
 
+# 忽略build
+build/

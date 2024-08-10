@@ -51,7 +51,7 @@ class JenkinsMonitor:
             current_time = dt_object.strftime("%Y-%m-%d %H:%M:%S")
             # 增加不同的artifact的判断
             if "PRJ_HMTC_QNX" in self.url:
-                artifact_url = f"http://10.10.96.167:8080/PRJ_HMTC_QNX/{data['number']}"
+                artifact_url = f"http://10.10.96.167:8080/PRJ_HMTC_QNX/{data['number']}/"
 
             report_content = [
                 [{"tag": "text", "text": "恭喜你，版本编译成功啦"}],
