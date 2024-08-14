@@ -5,6 +5,11 @@ import time
 import requests
 import urllib3
 import yaml
+from jenkins_artifact_data import JenkinsArtifactData
+from feishu_card import FeishuCard
+from feishu_card import CardLink
+from feishu_card import Config
+from feishu_card import Element
 
 urllib3.disable_warnings()
 
@@ -67,10 +72,11 @@ class FeiShuBot(object):
 
         try:
             post_data = json.dumps(data)
-            # logger.info("post_data --> " + post_data)
+            logger.info("post_data --> " + post_data)
             response = requests.post(
                 self._web_hook, headers=self._headers, data=post_data, verify=False
             )
+            logger.info("response --> " + response.text)
         except requests.exceptions.HTTPError as exc:
             logger.error(
                 "消息发送失败， HTTP error: %d, reason: %s"
@@ -121,6 +127,65 @@ class FeiShuBot(object):
                             "content": report_content,
                         }
                     }
+                },
+            },
+        )
+
+    def send_jenkins_card_message(self, jenkins_artifact: JenkinsArtifactData, webhook, webhook_key):
+        logger.info("send_jenkins_card_message " + jenkins_artifact.name)
+        # get sign
+        timestamp = int(time.time())
+        sign = gen_sign(timestamp, webhook_key)
+        self._post(
+            webhook,
+            {
+                "timestamp": timestamp,  # 时间戳。
+                "sign": sign,  # 得到的签名字符串。
+                "msg_type": "interactive",
+                "card": {
+                    "header": {
+                        "title": {
+                            "content": jenkins_artifact.name,
+                            "tag": "lark_md"
+                        }
+                    },
+                    "elements": [{
+                        "tag": "div",
+                        "text": {
+                            "content": jenkins_artifact.build_content,
+                            "tag": "lark_md"
+                        }
+                    },
+                        {
+                        "tag": "div",
+                        "text": {
+                            "content": jenkins_artifact.build_time,
+                            "tag": "lark_md"
+                        }
+                    },
+                        {
+                        "actions": [{
+                            "tag": "button",
+                            "text": {
+                                "content": "编译链接",
+                                "tag": "lark_md"
+                            },
+                            "url": jenkins_artifact.build_url,
+                            "type": "default",
+                            "value": {}
+                        }, {
+                            "tag": "button",
+                            "text": {
+                                "content": "产物下载链接",
+                                "tag": "lark_md"
+                            },
+                            "url": jenkins_artifact.artifact_url,
+                            "type": "default",
+                            "value": {}
+                        }],
+                        "tag": "action"
+                    },
+                    ],
                 },
             },
         )

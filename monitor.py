@@ -29,9 +29,9 @@ jenkins_monitors = jenkins_project.build_jenkins_monitor()
 def main():
     jira_monitor.do_monitor()
     logger.info("start gerrit monitor")
-    scheduler.add_job(tel_bot.do_robot_start)
+    # scheduler.add_job(tel_bot.do_robot_start)
+    # scheduler.start()
     # scheduler.add_job(jenkins_project.monitor_jenkins, "interval", seconds=app_config.get_sleep_time())
-    scheduler.start()
     while True:
         # schedule.run_pending()
         # logger.info("run pending")

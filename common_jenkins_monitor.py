@@ -30,6 +30,7 @@ def monitor_build_status(
         return
 
     data = jenkins_api.get_latest_build_data(latest_build_url)
+
     if data is None:
         logger.error("Failed to get build status.")
     else:

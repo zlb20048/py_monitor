@@ -2,6 +2,7 @@ from common_jenkins_monitor import monitor_build_status
 from datetime import datetime
 import robot_send_msg
 from loguru import logger
+from jenkins_artifact_data import JenkinsArtifactData
 
 
 def _report_failed_message(data):
@@ -53,6 +54,11 @@ class JenkinsMonitor:
             if "PRJ_HMTC_QNX" in self.url:
                 artifact_url = f"http://10.10.96.167:8080/PRJ_HMTC_QNX/{data['number']}/"
 
+            jenkins_artifact_data = JenkinsArtifactData(name=self.name,
+                                                        build_url=build_url,
+                                                        artifact_url=artifact_url,
+                                                        build_time="编译时间: {}".format(current_time),
+                                                        build_content="恭喜你，版本编译成功啦")
             report_content = [
                 [{"tag": "text", "text": "恭喜你，版本编译成功啦"}],
                 [{"tag": "text", "text": "编译时间: {}".format(current_time)}],
@@ -64,7 +70,7 @@ class JenkinsMonitor:
                 logger.info("need_send_message{}, send To: {}".format(feishu_webhook["need_send_message"],
                                                                       feishu_webhook["tag"]))
                 if feishu_webhook["need_send_message"]:
-                    robot_send_msg.send_robot_notify("版本编译成功", report_content, feishu_webhook['robot_url'],
+                    robot_send_msg.send_card_message(jenkins_artifact_data, feishu_webhook['robot_url'],
                                                      feishu_webhook['robot_key'])
 
     def failure_message(self, data):

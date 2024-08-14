@@ -111,7 +111,7 @@
       ]
     },
     {
-      "name": "HMTC8295_FWK",
+      "name": "HMTC8295_QNX",
       "url": "http://10.10.96.190:8080/view/HMTC/view/HMTC8295/job/PRJ_HMTC_QNX/",
       "feishu_robot": [
         {
@@ -124,7 +124,7 @@
           "robot_url": "https://open.feishu.cn/open-apis/bot/v2/hook/ab324c7a-61c9-4481-a29b-3f8eb91f6b6c",
           "robot_key": "iYzw0rxpyKWkqAIrlkW0ub",
           "tag": "现代8295-研发群",
-          "need_send_message": true
+          "need_send_message": false
         }
       ]
     }

@@ -22,7 +22,7 @@ jenkins_conversation_store = save_file.KeyValueStore("tel_bot_conversation.prope
 
 def get_updates(offset=None):
     url = f'{TELEGRAM_API_URL}/getUpdates'
-    params = {'timeout': 100, 'offset': offset}
+    params = {'timeout': 1000, 'offset': offset}
     response = requests.get(url, params=params, proxies=proxies)
     logger.info(f"data --> ${response.json()}")
     return response.json()
@@ -37,7 +37,7 @@ def send_message(chat_id, text):
 def do_robot_start():
     # offset = orm_db.get_jenkins_build_update_id()
     offset = jenkins_conversation_store.get(CONVERSATION_BUILD_NAME)
-    logger.info(f"offset --> {offset}")
+    # logger.info(f"offset --> {offset}")
     try:
         updates = get_updates(offset)
         if 'result' in updates:

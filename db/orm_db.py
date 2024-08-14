@@ -107,16 +107,16 @@ def analyze_user_commit():
     for user_count in user_commit_counts:
         print("姓名: {}, 提交数: {}".format(user_count.name, user_count.count))
 
-        # 获取该名称下的所有数据，并按时间排序
-        user_commit_data = (
-            Gerrit
-            .select()
-            .where((Gerrit.name == user_count.name) & (Gerrit.time >= start_of_week))
-            .order_by(Gerrit.time.desc())
-        )
-
-        for record in user_commit_data:
-            print("  URL: {}, Time: {}".format(record.url, record.time))
+        # # 获取该名称下的所有数据，并按时间排序
+        # user_commit_data = (
+        #     Gerrit
+        #     .select()
+        #     .where((Gerrit.name == user_count.name) & (Gerrit.time >= start_of_week))
+        #     .order_by(Gerrit.time.desc())
+        # )
+        #
+        # for record in user_commit_data:
+        #     print("  URL: {}, Time: {}".format(record.url, record.time))
         print()  # 每个分组之间添加空行
 
 
