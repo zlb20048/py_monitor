@@ -6,10 +6,6 @@ import requests
 import urllib3
 import yaml
 from jenkins_artifact_data import JenkinsArtifactData
-from feishu_card import FeishuCard
-from feishu_card import CardLink
-from feishu_card import Config
-from feishu_card import Element
 
 urllib3.disable_warnings()
 

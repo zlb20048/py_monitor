@@ -106,7 +106,7 @@
           "robot_url": "https://open.feishu.cn/open-apis/bot/v2/hook/6625953f-13f0-41c9-ac93-a36fc288dd98",
           "robot_key": "Ze3ByAKdmr6sjANd9o42Kd",
           "tag": "现代8295 App开发群",
-          "need_send_message": true
+          "need_send_message": false
         }
       ]
     },

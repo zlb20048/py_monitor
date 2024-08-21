@@ -117,7 +117,7 @@ def analyze_user_commit():
         #
         # for record in user_commit_data:
         #     print("  URL: {}, Time: {}".format(record.url, record.time))
-        print()  # 每个分组之间添加空行
+        # print()  # 每个分组之间添加空行
 
 
 if __name__ == '__main__':

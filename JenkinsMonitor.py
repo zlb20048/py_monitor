@@ -81,5 +81,14 @@ class JenkinsMonitor:
                 logger.info("need_send_message{}, send To: {}".format(feishu_webhook["need_send_message"],
                                                                       feishu_webhook["tag"]))
                 if feishu_webhook["need_send_message"]:
-                    robot_send_msg.send_robot_notify("版本编译失败", error_content, feishu_webhook['robot_url'],
+                    build_url = data["url"]
+                    artifact_url = build_url + "artifact/"
+                    dt_object = datetime.fromtimestamp(data["timestamp"] / 1000.0)
+                    current_time = dt_object.strftime("%Y-%m-%d %H:%M:%S")
+                    jenkins_artifact_data = JenkinsArtifactData(name=self.name,
+                                                                build_url=build_url,
+                                                                artifact_url=artifact_url,
+                                                                build_time="编译时间: {}".format(current_time),
+                                                                build_content="Oh，NO，编译失败啦！！！")
+                    robot_send_msg.send_card_message(jenkins_artifact_data, feishu_webhook['robot_url'],
                                                      feishu_webhook['robot_key'])
