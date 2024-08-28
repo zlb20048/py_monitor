@@ -52,7 +52,7 @@ def do_robot_start():
 
                 # 根据消息内容执行操作
                 if message_text == '/start':
-                    send_message(chat_id, '欢迎使用我们的服务！')
+                    send_message(chat_id, '欢迎使用我们的服务!!！')
                 else:
                     send_message(chat_id, f'你发送了: {message_text}')
 
