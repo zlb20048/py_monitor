@@ -50,7 +50,7 @@ class JiraMonitor:
             ]
         else:
             report_content = [
-                [{"tag": "text", "text": "恭喜大家，本次没有任何超时任务"}],
+                [{"tag": "text", "text": "Good Job ！！！恭喜大家，本次没有任何超时任务"}],
                 [{"tag": "at", "user_id": "all", "user_name": "所有人"}],
                 [{"tag": "text", "text": ""}],
             ]
