@@ -23,6 +23,9 @@ def get_jira_configs():
     return config['jira']
 
 
+def get_work_configs():
+    return config['work']
+
 def get_gerrit_check_count():
     return config['gerrit_config']['check_count']
 

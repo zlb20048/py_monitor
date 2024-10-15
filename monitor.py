@@ -7,7 +7,8 @@ from loguru import logger
 import app_config
 import jira_monitor
 from apscheduler.schedulers.background import BackgroundScheduler
-from robot import tel_bot
+
+import work_tips
 
 scheduler = BackgroundScheduler()
 
@@ -28,6 +29,7 @@ jenkins_monitors = jenkins_project.build_jenkins_monitor()
 
 def main():
     jira_monitor.do_monitor()
+    work_tips.do_monitor()
     logger.info("start gerrit monitor")
     # scheduler.add_job(tel_bot.do_robot_start)
     # scheduler.start()

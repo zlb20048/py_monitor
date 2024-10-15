@@ -150,6 +150,16 @@
       ]
     }
   ],
+  "work": [{
+    "feishu_robot": [
+        {
+          "robot_url": "https://open.feishu.cn/open-apis/bot/v2/hook/75b0968b-b81c-45d4-b852-8a044318700c",
+          "robot_key": "g09GEEgsDfwjLa5ZaDgRBb",
+          "tag": "车控组群",
+          "need_send_message": true
+        }
+      ]
+  }],
   "logging": {
     "level": "info",
     "file": "logs/app.log"
@@ -179,6 +189,11 @@
             "is_need_merge": false,
             "ignore_branch": "master",
             "is_need_jenkins_verify": false
+          },
+          {
+            "is_need_merge": false,
+            "ignore_branch": "Hyundai_proto",
+            "is_need_jenkins_verify": false
           }
         ]
       },
@@ -188,6 +203,26 @@
           {
             "is_need_merge": true,
             "ignore_branch": "master",
+            "is_need_jenkins_verify": true
+          },
+          {
+            "is_need_merge": false,
+            "ignore_branch": "Hyundai_proto",
+            "is_need_jenkins_verify": true
+          }
+        ]
+      },
+      {
+        "project_name": "projects/InfoLink",
+        "project_config": [
+          {
+            "is_need_merge": true,
+            "ignore_branch": "dev",
+            "is_need_jenkins_verify": true
+          },
+          {
+            "is_need_merge": false,
+            "ignore_branch": "Hyundai_proto",
             "is_need_jenkins_verify": true
           }
         ]
