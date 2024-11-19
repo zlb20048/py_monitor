@@ -27,7 +27,7 @@ def login(user_id, user_password):
 # 设置JIRA的URL和凭证
 jira_url = "http://10.10.2.208:8080/"
 username = "zixiangliu"
-api_token = "Lzx19880328pa"
+api_token = "12342313124"
 
 # 连接到JIRA
 jira = JIRA(jira_url, basic_auth=(username, api_token))
@@ -42,4 +42,4 @@ for issue in issues:
 
 
 # if __name__ == '__main__':
-#     login("zixiangliu", "Lzx19880328pa")
+#     login("zixiangliu", "12312451")

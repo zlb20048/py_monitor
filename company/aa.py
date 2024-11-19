@@ -11,7 +11,7 @@ driver.get('http://210.22.130.125:8990/seeyon/main.do?method=main')
 
 # Fill in the username and password
 driver.find_element(By.ID, "login_username").send_keys('zixiangliu')
-driver.find_element(By.ID, "login_password").send_keys('Lzx19880328!')
+driver.find_element(By.ID, "login_password").send_keys('123123123123!')
 
 # Submit the form (adjust the submit method as necessary)
 driver.find_element(By.ID, "login_button").click()

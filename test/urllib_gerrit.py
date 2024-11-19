@@ -5,7 +5,7 @@ from base64 import b64encode
 # URL和认证信息
 url = 'http://10.10.96.212:8081/login/%23%2Fq%2Fstatus%3Aopen'
 username = 'zixiangliu'
-password = 'Lzx19880328'
+password = '123123123'
 
 # 创建一个密码管理器
 password_mgr = urllib.request.HTTPPasswordMgrWithDefaultRealm()

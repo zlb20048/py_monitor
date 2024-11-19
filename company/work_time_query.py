@@ -7,7 +7,7 @@ url_report = "http://210.22.130.125:8990/seeyon/vreport/vReport.do?method=vRepor
 
 # Replace with your actual credentials
 username = 'zixiangliu'
-password = 'Lzx19880328!'
+password = '1231243141'
 
 # Create a session to persist cookies
 session = requests.Session()

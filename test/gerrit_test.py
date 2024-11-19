@@ -27,4 +27,4 @@ def login(user_id, user_password):
 
 
 if __name__ == '__main__':
-    login("zixiangliu", "Lzx19880328")
+    login("zixiangliu", "1234556")

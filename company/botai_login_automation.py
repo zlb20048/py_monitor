@@ -37,7 +37,7 @@ username_input.send_keys("zixiangliu")
 
 # Find password input field and enter password
 password_input = driver.find_element(By.ID, "login_password")
-password_input.send_keys("Lzx19880328!")
+password_input.send_keys("123123123!")
 
 # Find login button and click
 login_button = driver.find_element(By.ID, "login_button")

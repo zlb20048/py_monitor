@@ -9,7 +9,7 @@ scheduler = BackgroundScheduler()
 # 设置JIRA的URL和凭证
 jira_url = "http://10.10.2.208:8080/"
 username = "zixiangliu"
-api_token = "Lzx19880328pa"
+api_token = "12312312312"
 
 
 class JiraMonitor:
