@@ -1,9 +1,10 @@
 import jenkins
+import gerrit_config
 
 # 配置 Jenkins URL 和认证信息
 jenkins_url = 'http://10.10.96.190:8080/view/HMTC/view/HMTC8295'
-user = 'zixiangliu'
-api_token = '11bba03e671de4812a3be72ccfff239ce8'
+user = gerrit_config.get_user_name()
+api_token = gerrit_config.get_jenkins_api_token()
 
 # 创建 Jenkins 服务器实例
 server = jenkins.Jenkins(jenkins_url, username=user, password=api_token)

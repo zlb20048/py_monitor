@@ -14,3 +14,12 @@ def get_gerrit_ignore():
 
 def get_jenkins_url():
     return config.get("jenkins", "jenkins_url")
+
+def get_user_name():
+    return config.get("user_name", "user_name")
+
+def get_jenkins_token():
+    return config.get("pwd", "jenkins_token")
+
+def get_jenkins_api_token():
+    return config.get("pwd", "jenkins_api_token")

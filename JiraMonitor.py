@@ -1,6 +1,7 @@
 from jira import JIRA
 from loguru import logger
 import robot_send_msg
+import gerrit_config
 
 from apscheduler.schedulers.background import BackgroundScheduler
 
@@ -8,8 +9,8 @@ scheduler = BackgroundScheduler()
 
 # 设置JIRA的URL和凭证
 jira_url = "http://10.10.2.208:8080/"
-username = "zixiangliu"
-api_token = "12312312312"
+username = gerrit_config.get_user_name()
+api_token = gerrit_config.get_jenkins_token()
 
 
 class JiraMonitor:
