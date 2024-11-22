@@ -1,11 +1,11 @@
 import urllib.request
 from urllib.error import HTTPError
-from base64 import b64encode
+import gerrit_config
 
 # URL和认证信息
 url = 'http://10.10.96.212:8081/login/%23%2Fq%2Fstatus%3Aopen'
-username = 'zixiangliu'
-password = '123123123'
+username = gerrit_config.get_user_name()
+password = gerrit_config.get_gerrit_pwd()
 
 # 创建一个密码管理器
 password_mgr = urllib.request.HTTPPasswordMgrWithDefaultRealm()

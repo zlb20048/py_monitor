@@ -207,7 +207,7 @@
           },
           {
             "is_need_merge": false,
-            "ignore_branch": "Hyundai_proto",
+            "ignore_branch": "HMTC_Release1117",
             "is_need_jenkins_verify": true
           }
         ]

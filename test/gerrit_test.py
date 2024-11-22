@@ -1,5 +1,6 @@
 import requests
 from requests.auth import HTTPBasicAuth
+import gerrit_config
 
 url = 'http://10.10.96.213:8081/a/changes/?q=owner:self%20status:open'
 
@@ -27,4 +28,4 @@ def login(user_id, user_password):
 
 
 if __name__ == '__main__':
-    login("zixiangliu", "1234556")
+    login("zixiangliu", gerrit_config.get_gerrit_pwd())
