@@ -10,3 +10,6 @@ robot/__pycache__/
 
 # 忽略build
 build/
+
+config.ini
+pwd.ini

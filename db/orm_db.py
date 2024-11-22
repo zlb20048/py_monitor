@@ -118,20 +118,3 @@ def analyze_user_commit():
         # for record in user_commit_data:
         #     print("  URL: {}, Time: {}".format(record.url, record.time))
         # print()  # 每个分组之间添加空行
-
-
-if __name__ == '__main__':
-    save_gerrit_data(name="zixiangliu", url="https://112.112.4", time="2024-01-15 17:52:01", count=1)
-    save_gerrit_data(name="zixiangliu", url="https://112.112.3", time="2024-01-15 17:52:01", count=1)
-    save_gerrit_data(name="zixiangl", url="https://112.112.1", time="2024-01-17 17:52:01", count=1)
-    save_gerrit_data(name="zixiangl", url="https://112.112.11", time="2024-01-14 17:52:01", count=1)
-    save_jenkins_build_update_id("12334455", "hello")
-    save_jenkins_build_update_id("12334456", "中文")
-    jenkins = save_jenkins_data(name="jenkins_app4", url="https://112.112.24")
-    jenkins_build = get_jenkins_build_update_id()
-    print(f"jenkins_build --> {jenkins_build.update_id}")
-    # print(f"name -> {jenkins.name}, url -> {jenkins.url}")
-    # data = get_jenkins_data("jenkins_app")
-    # print(f"name -> {data.name}, url -> {data.url}")
-    # update_jenkins_data(name="jenkins_app3", new_url="https://112.112.10")
-    # analyze_user_commit()

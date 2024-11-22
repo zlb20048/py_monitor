@@ -1,6 +1,7 @@
 import requests
 from requests.auth import HTTPBasicAuth
 from jira import JIRA
+import gerrit_config
 
 url = 'http://10.10.2.208:8080/secure/Dashboard.jspa?selectPageId=15422'
 
@@ -26,8 +27,8 @@ def login(user_id, user_password):
 
 # 设置JIRA的URL和凭证
 jira_url = "http://10.10.2.208:8080/"
-username = "zixiangliu"
-api_token = "12342313124"
+username = gerrit_config.get_user_name()
+api_token = gerrit_config.get_jenkins_token()
 
 # 连接到JIRA
 jira = JIRA(jira_url, basic_auth=(username, api_token))
@@ -39,7 +40,3 @@ issues = jira.search_issues(jql_query)
 # 打印问题信息
 for issue in issues:
     print(f"{issue.key}: {issue.fields.summary}")
-
-
-# if __name__ == '__main__':
-#     login("zixiangliu", "12312451")
