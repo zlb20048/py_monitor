@@ -7,10 +7,11 @@ from loguru import logger
 import app_config
 import jira_monitor
 from apscheduler.schedulers.background import BackgroundScheduler
+from pytz import timezone
 
 import work_tips
 
-scheduler = BackgroundScheduler()
+scheduler = BackgroundScheduler(timezone=timezone('Asia/Shanghai'))
 
 # 移除默认的 stderr 处理器
 logger.remove(handler_id=None)

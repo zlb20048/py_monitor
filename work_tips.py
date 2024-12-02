@@ -4,8 +4,9 @@ import robot_send_msg
 import app_config
 
 from apscheduler.schedulers.background import BackgroundScheduler
+from pytz import timezone
 
-scheduler = BackgroundScheduler()
+scheduler = BackgroundScheduler(timezone=timezone('Asia/Shanghai'))
 
 def _build_work_monitors():
     # 读取配置文件，并发起监控

@@ -209,6 +209,11 @@
             "is_need_merge": false,
             "ignore_branch": "HMTC_Release1117",
             "is_need_jenkins_verify": true
+          },
+          {
+            "is_need_merge": false,
+            "ignore_branch": "hmtc_releaseFrom1126",
+            "is_need_jenkins_verify": true
           }
         ]
       },

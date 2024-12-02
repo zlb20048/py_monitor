@@ -2,10 +2,11 @@ from jira import JIRA
 from loguru import logger
 import robot_send_msg
 import gerrit_config
+from pytz import timezone
 
 from apscheduler.schedulers.background import BackgroundScheduler
 
-scheduler = BackgroundScheduler()
+scheduler = BackgroundScheduler(timezone=timezone('Asia/Shanghai'))
 
 # 设置JIRA的URL和凭证
 jira_url = "http://10.10.2.208:8080/"
@@ -66,8 +67,8 @@ class JiraMonitor:
         self.success_message(report_content)
 
     def do_scheduler_job(self):
-        scheduler.add_job(self.monitor, 'cron', hour=17, minute=00, day_of_week='mon-sat')
-        scheduler.add_job(self.monitor, 'cron', hour=18, minute=00, day_of_week='mon-sat')
+        scheduler.add_job(self.monitor, 'cron', hour=17, minute=00, day_of_week='0-5')
+        scheduler.add_job(self.monitor, 'cron', hour=18, minute=00, day_of_week='0-5')
 
         # scheduler.add_job(self.monitor, 'interval', seconds=10)
         logger.info("Scheduler job added")
